@@ -1,5 +1,6 @@
 //Funcion para hacer consultas GET/POST/PUT/DELETE
 export const consults = async (route, method = "GET", body = null) => {
+    console.log(route, method, body)
     try {
         const token = localStorage.getItem("token");
 
