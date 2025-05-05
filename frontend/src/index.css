@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* font-family: "Lato", sans-serif;
+font-family: "Rubik", sans-serif; */
+
+:root {
+  --color-primary: #0b0f3cc7;
+  --color-secondary: #FFC107;
+  --color-bg-dark: #0B0F3C;
+  --color-text-light: #E0E0E0;
+  --color-text-grey: #8d8d8d;
+  --color-bg-dark2: #252525;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.bg-primary { background-color: var(--color-primary); }
+.text-primary { color: var(--color-primary); }
+
+.bg-secondary { background-color: var(--color-secondary); }
+.text-secondary { color: var(--color-secondary); }
+
+.bg-dark { background-color: var(--color-bg-dark); }
+.text-light { color: var(--color-text-light); }
+
+.text-grey {color: var(--color-text-grey)}
+.bg-grey {background-color: var(--color-text-grey)}
+
+.text-dark {color: var(--color-bg-dark)}
+.text-dark2 {color: var(--color-bg-dark2)}
+.bg-dark2 {background-color: var(--color-bg-dark2)}
+
+.title {
+  font-family: "Rubik", sans-serif;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1); /* opcional */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  backdrop-filter: blur(7px) saturate(160%);
+  -webkit-backdrop-filter: blur(7px) saturate(160%);
+  background-color: rgba(236, 236, 243, 0.493);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+table, table td {
+  border: 1px solid #0b0f3c7a;
+}
+
+.toast-action {
+  background-color: #c2c2c2;
+  color: #0b0f3c;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+button {
+  cursor: pointer;
+}
+
+input[type="month"]::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Cambia blanco a negro, y viceversa */
+}
