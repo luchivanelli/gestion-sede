@@ -37,9 +37,11 @@ app.get("/", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
-});
+export default app;
+
+// app.listen(PORT, () => {
+//   console.log(`Servidor corriendo en http://localhost:${PORT}`);
+// });
 
 
 // Cerrar conexion a la base de datos
