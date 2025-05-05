@@ -16,7 +16,7 @@ export const consults = async (route, method = "GET", body = null) => {
             options.body = JSON.stringify(body);
         }
     
-        const response = await fetch(`http://localhost:5000${route}`, options);
+        const response = await fetch(`gestion-sede-backend.vercel.app${route}`, options);
     
         if (!response.ok) {
             throw new Error(`Error ${response.status}: ${response.statusText}`);
