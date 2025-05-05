@@ -1,15 +1,15 @@
 import mysql2 from 'mysql2';
 
 export const connection = mysql2.createConnection({
-    host: 'localhost',       // Cambia por la dirección de tu base de datos
-    user: 'root',      // Tu nombre de usuario en MySQL
-    password: 'root', // Tu contraseña en MySQL
-    database: 'gestion_sede' // El nombre de la base de datos
+    host: 'localhost',
+    user: 'root',
+    password: 'root',
+    database: 'gestion_sede'
 });
 
 export const connectionDemo = mysql2.createConnection({
-    host: 'localhost',       // Cambia por la dirección de tu base de datos
-    user: 'root',      // Tu nombre de usuario en MySQL
-    password: 'root', // Tu contraseña en MySQL
-    database: 'gestion_demo' // El nombre de la base de datos
+    host: 'bfp9b7bqgwhm0nrgvgow-mysql.services.clever-cloud.com',
+    user: 'uomyffhmlqjv6gpx',
+    password: 'yl2CbWjZ6SGS5A8bGpj5',
+    database: 'bfp9b7bqgwhm0nrgvgow'
 });
