@@ -28,4 +28,7 @@ router.post("/payments/add-payment", verifyToken, addPayment)
 router.delete("/payments/:id", verifyToken, deletePayment)
 
 router.post("/login", login)
+router.get("/login", (req, res) => {
+    res.json({message: "conexion exitosa"});
+})
 
