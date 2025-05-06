@@ -16,7 +16,6 @@ export default function Login() {
     const data = { username, password };
 
     let result = await consults("/login", "POST", data) //consulta para login
-    console.log("resultado de la consulta post de login:", result)
     
     if (result.token) {
       localStorage.setItem("token", result.token);

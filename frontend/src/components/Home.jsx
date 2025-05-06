@@ -46,6 +46,10 @@ const Home = () => {
         localStorage.removeItem("members");
         localStorage.setItem("members", JSON.stringify(members));
         dispatch(setMembers(members))
+
+        const payments = await consults("/payments", "GET");
+        localStorage.removeItem("payments");
+        localStorage.setItem("payments", JSON.stringify(payments))
       } else {
         navigate("/login");
       }
