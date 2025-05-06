@@ -10,8 +10,6 @@ import { useEffect } from 'react';
 import AddPayment from './components/AddPayment';
 import Payments from './components/Payments';
 
-//Ajustar diseño web
-
 const App = () => {
   return (
     <Router>
