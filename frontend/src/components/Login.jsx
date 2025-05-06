@@ -16,6 +16,7 @@ export default function Login() {
     const data = { username, password };
 
     let result = await consults("/login", "POST", data) //consulta para login
+    console.log(result)
     
     if (result.token) {
       localStorage.setItem("token", result.token);
@@ -26,6 +27,9 @@ export default function Login() {
       setMessageLogin(result.message)
     }
   };
+
+  const token = localStorage.getItem("token");
+  console.log("Token desde localStorage:", token);
 
   //Redirigir después de iniciar sesión exitosamente
   useEffect(() => {
