@@ -16,7 +16,7 @@ connection.connect((err) => {
 });
 
 app.use(cors({
-  origin: ["http://localhost:5173", "https://gestion-sede.vercel.app", "https://gestion-sede-backend.vercel.app"],
+  origin: ["http://localhost:5173", "https://gestion-sede.vercel.app"],
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
