@@ -1,12 +1,26 @@
 {
-  "rewrites": [
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/app.js"
+      "src": "app.js",
+      "use": "@vercel/node"
     },
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/frontend/dist/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "^/(.*)",
+      "dest": "/app.js"
+    },
+    {
+      "src": "^/(.*\\..*)$",
+      "dest": "/frontend/dist/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "dest": "/frontend/dist/index.html"
     }
   ]
 }
