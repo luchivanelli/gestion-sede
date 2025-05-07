@@ -37,9 +37,9 @@ export default function Login() {
   return (
     <div className='bg-dark h-screen'>
       <div className='h-1/3 w-full bg-white flex justify-center items-center gap-10 p-5'>
-        <h1 className='title font-bold text-dark'>Gestión de socios</h1>
+        <h1 className='title text-[32px] font-bold text-dark'>Gestión de socios</h1>
         <div className='flex justify-end'>
-          <img src={logo} className='max-w-[120px] min-w-[100px]'/>
+          <img src={logo} className='max-w-[120px]'/>
         </div>
       </div>
       <div className='flex flex-col justify-center items-center text-dark h-2/3 p-5'>
