@@ -25,7 +25,7 @@ app.use(cors({
 app.use(express.json());
 
 //Establece el uso de todos endpoints (rutas)
-app.use("/", router)
+app.use("/api", router)
 
 app.get("/", (req, res) => {
   connection.query('SELECT * FROM socios', (err, results) => {
