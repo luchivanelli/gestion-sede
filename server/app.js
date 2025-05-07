@@ -16,7 +16,7 @@ connection.connect((err) => {
 });
 
 app.use(cors({
-  origin: ["http://localhost:5173", "https://gestion-sede.vercel.app", "https://gestion-sede-backend.vercel.app/"],
+  origin: ["http://localhost:5173", "https://gestion-sede.vercel.app", "https://gestion-sede-backend.vercel.app"],
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
@@ -38,17 +38,3 @@ app.get("/", (req, res) => {
 });
 
 export default app;
-
-// app.listen(PORT, () => {
-//   console.log(`Servidor corriendo en http://localhost:${PORT}`);
-// });
-
-
-// Cerrar conexion a la base de datos
-// connection.end((err) => {
-//   if (err) {
-//     console.error('Error al cerrar la conexión: ' + err.stack);
-//   } else {
-//     console.log('Conexión cerrada.');
-//   }
-// });
