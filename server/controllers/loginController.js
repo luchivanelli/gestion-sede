@@ -11,7 +11,7 @@ export const login = (req, res) => {
 
     if (result.length > 0) {
       const token = jwt.sign({ username, tipo: "real" }, "Stack", {
-        expiresIn: "50m",
+        expiresIn: "60m",
       });
       return res.json({ token, tipo: "real" }); //si el usuario exite, acá se corta la ejecución
     }
