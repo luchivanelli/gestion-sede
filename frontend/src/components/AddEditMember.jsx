@@ -1,14 +1,16 @@
 import { addMember, editMember } from "../store/features/membersSlice.js"
 import { useState, useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import InputSelect from "./InputSelect.jsx"
 import { useNavigate, useParams } from "react-router-dom"
 import { consults } from "../helpers/consults.js"
 import { toast, Toaster } from 'sonner'
 
 const AddEditMember = ()=> {
-    const members = useSelector(state => state.members)
-    const memberNumber = members.length + 1
+    const members = JSON.parse(localStorage.getItem("members"))
+    const memberNumber = localStorage.getItem("nextMemberNumber")
+    ? parseInt(localStorage.getItem("nextMemberNumber"))
+    : members.length + 1;
     const [member, setMember] = useState({
         nro_socio: memberNumber,
         nombre_completo: "",
