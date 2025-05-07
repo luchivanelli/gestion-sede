@@ -11,11 +11,15 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
+      "src": "^/api/(.*)",
       "dest": "/app.js"
     },
     {
-      "src": "/(.*)",
+      "src": "^/(.*\\..*)$",
+      "dest": "/frontend/dist/$1"
+    },
+    {
+      "src": "^/(.*)$",
       "dest": "/frontend/dist/index.html"
     }
   ]
