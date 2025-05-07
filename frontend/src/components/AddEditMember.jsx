@@ -1,5 +1,5 @@
 import { addMember, editMember } from "../store/features/membersSlice.js"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo } from "react"
 import { useDispatch } from "react-redux"
 import InputSelect from "./InputSelect.jsx"
 import { useNavigate, useParams } from "react-router-dom"
@@ -7,12 +7,17 @@ import { consults } from "../helpers/consults.js"
 import { toast, Toaster } from 'sonner'
 
 const AddEditMember = ()=> {
-    const members = JSON.parse(localStorage.getItem("members"))
-    const memberNumber = localStorage.getItem("nextMemberNumber")
-    ? parseInt(localStorage.getItem("nextMemberNumber"))
-    : members.length + 1;
+    const members = useMemo(() => {
+        return JSON.parse(localStorage.getItem("members")) || [];
+    }, []);
+    
+    const memberNumber = useMemo(() => {
+        const saved = localStorage.getItem("nextMemberNumber");
+        return saved ? parseInt(saved) : members.length + 1;
+    }, [members]);
+      
     const [member, setMember] = useState({
-        nro_socio: memberNumber,
+        nro_socio: "",
         nombre_completo: "",
         dni: "",
         direccion: "",
@@ -32,8 +37,8 @@ const AddEditMember = ()=> {
           if (memberEdit) {
             setMember(memberEdit);
         }
-    } else {
-        setMember({
+        } else {
+            setMember({
                 nro_socio: memberNumber,
                 nombre_completo: "",
                 dni: "",
