@@ -74,7 +74,7 @@ const AddEditCard = ()=> {
             if (!card.tipo_tarjeta) newErrors.tipo_tarjeta = "El tipo de tarjeta es obligatorio.";
             if (!card.nro_tarjeta.trim()) newErrors.nro_tarjeta = "El número de tarjeta es obligatorio.";
             if (!card.vencimiento.trim()) newErrors.vencimiento = "El vencimiento es obligatorio.";
-            if (!card.cod_seguridad.trim()) newErrors.cod_seguridad = "El código de seguridad es obligatorio.";
+            if (!card.cod_seguridad) newErrors.cod_seguridad = "El código de seguridad es obligatorio.";
     
             if (Object.keys(newErrors).length > 0) {
                 setErrors(newErrors);
