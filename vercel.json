@@ -1,7 +1,7 @@
 {
     "builds": [
       {
-        "src": "app.js",
+        "src": "server/app.js",
         "use": "@vercel/node"
       },
       {
@@ -11,12 +11,17 @@
     ],
     "routes": [
       {
-        "src": "/(.*)",
-        "dest": "app.js"
+        "src": "^/(.*)",
+        "dest": "/server/app.js"
       },
       {
-        "src": "/(.*)",
+        "src": "^/(.*\\..*)$",
+        "dest": "/frontend/dist/$1"
+      },
+      {
+        "src": "^/(.*)$",
         "dest": "/frontend/dist/index.html"
       }
     ]
   }
+  

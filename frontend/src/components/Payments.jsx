@@ -107,7 +107,7 @@ const Payments = ()=> {
     return (
         <div className="p-3 text-sm md:text-base lg:px-0 mx-auto max-w-[1000px]">
             <h2 className='text-center p-3 pt-0 text-dark font-bold text-xl border-b-1'>Gestionar cuotas</h2>
-            <div className="flex flex-col justify-between items-center py-3 sm:flex-row">
+            <div className="flex flex-col justify-between items-center py-3 md:flex-row">
                 <div className='flex py-2 gap-2 items-center justify-end text-dark'>
                     <p>Ordenar por:</p>
                     <button className={`border-1 border-[#0b0f3c] !text-xs md:!text-sm py-1 px-2 rounded ${selectedOrder === "socio" ? "bg-[#0b0f3cc7] text-light" : ""}`} onClick={() => setSelectedOrder("socio")}>Socio</button>

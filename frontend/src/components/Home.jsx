@@ -161,7 +161,7 @@ const Home = () => {
               <label htmlFor="search" className="mb-1 font-medium text-dark">Buscar:</label>
               <input type="text" name='search' onChange={handleSearch} className='w-[200px] px-2 py-1 border rounded' />
             </div>
-            <div id='filters-container' className="absolute hidden top-5 z-20 p-4 bg-white border-1 border-[#0b0f3cc7] rounded shadow">
+            <div id='filters-container' className="absolute hidden top-12 z-20 p-4 bg-white border-1 border-[#0b0f3cc7] rounded shadow">
               <div className="flex flex-col gap-2 text-[13px]">
                 <label className="flex items-center cursor-pointer">
                   <input type="radio" name="filtros" value="active" onChange={handleFilters} className="accent-[#0b0f3cc7]" />
